@@ -6,7 +6,7 @@ provider "helm" {
     exec {
       api_version = "client.authentication.k8s.io/v1alpha1"
       command     = "aws-iam-authenticator"
-      args        = ["token", "-i", "${var.kubernetes_cluster_name}"]
+      args        = ["token", "-i", var.kubernetes_cluster_name]
     }
   }
 }
